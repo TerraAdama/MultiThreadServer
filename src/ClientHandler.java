@@ -21,7 +21,7 @@ public class ClientHandler implements Runnable {
         ) {
             String message;
             while ((message = reader.readLine()) != null) {
-                System.out.println("Message reçu : " + message);
+                System.out.println("Message recu : " + message);
                 switch (message.toLowerCase()) {
                     case "hello":
                         writer.println("Bonjour client !");
@@ -34,7 +34,7 @@ public class ClientHandler implements Runnable {
                         socket.close();
                         return;
                     default:
-                        writer.println("Message reçu : " + message);
+                        writer.println("Message recu : " + message);
                 }
             }
         } catch (IOException e) {
